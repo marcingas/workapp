@@ -14,7 +14,7 @@ public class WorkController {
 //    private Trainer anotherTrainer;
 
     @Autowired
-    public WorkController(@Qualifier("sportTrainer") Trainer myTrainer
+    public WorkController(@Qualifier("outsource") Trainer myTrainer
 //                          ,@Qualifier("sportTrainer")Trainer anotherTrainer
                           ) {
         this.myTrainer = myTrainer;

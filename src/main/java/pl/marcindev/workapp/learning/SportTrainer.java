@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component;
 @Component
 //@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class SportTrainer implements Trainer {
-    @PostConstruct
-    public void doMyStartupStuff(){
-        System.out.println("Im upgrading my Sport Trainer");
-    }
-    @PreDestroy
-    public void doMyCleanupStuff(){
-        System.out.println("Im cleaning...");
-    }
+//    @PostConstruct
+//    public void doMyStartupStuff(){
+//        System.out.println("Im upgrading my Sport Trainer");
+//    }
+//    @PreDestroy
+//    public void doMyCleanupStuff(){
+//        System.out.println("Im cleaning...");
+//    }
 
     @Override
     public String dailyWorkerTraining() {
