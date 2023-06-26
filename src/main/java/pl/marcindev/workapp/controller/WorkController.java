@@ -1,10 +1,11 @@
 package pl.marcindev.workapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Value;
-import pl.marcindev.util.Trainer;
+import pl.marcindev.workapp.learning.Trainer;
 
 @RestController
 public class WorkController {
@@ -12,7 +13,7 @@ public class WorkController {
     private Trainer myTrainer;
 
     @Autowired
-    public WorkController(Trainer myTrainer) {
+    public WorkController(@Qualifier("sportTrainer") Trainer myTrainer) {
         this.myTrainer = myTrainer;
     }
 

@@ -1,4 +1,4 @@
-package pl.marcindev.util;
+package pl.marcindev.workapp.learning;
 
 import org.springframework.stereotype.Component;
 
