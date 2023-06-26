@@ -11,10 +11,13 @@ import pl.marcindev.workapp.learning.Trainer;
 public class WorkController {
 
     private Trainer myTrainer;
+    private Trainer anotherTrainer;
 
     @Autowired
-    public WorkController(@Qualifier("sportTrainer") Trainer myTrainer) {
+    public WorkController(@Qualifier("sportTrainer") Trainer myTrainer,
+                          @Qualifier("sportTrainer")Trainer anotherTrainer) {
         this.myTrainer = myTrainer;
+        this.anotherTrainer = anotherTrainer;
     }
 
     @Value("${director.name}")
@@ -36,6 +39,9 @@ public class WorkController {
     public String getDailyTraining() {
         return myTrainer.dailyWorkerTraining();
     }
-
+    @GetMapping("/check")
+    public String check(){
+        return "Comparing beans: myTrainer==anotherTrainer: " + (myTrainer==anotherTrainer);
+    }
 
 }
